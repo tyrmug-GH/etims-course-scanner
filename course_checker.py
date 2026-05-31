@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # --- CONFIGURATION ---
-URL = "https://academy.jpj.gov.my/myetims/calendar/index?l=&b=18" # Replace with your actual eTIMS URL
+URL = "https://academy.jpj.gov.my/myetims/calendar/index?b=18" # Replace with your actual eTIMS URL
 TARGET_COURSE = "Dibuka Untuk Permohonan"                      # The text you want to look for on the page
 BOT_TOKEN = os.getenv("BOT_TOKEN")             # Use the exact same token from test_bot.py
 CHAT_ID = os.getenv("CHAT_ID")                 # Use the exact same ID from test_bot.py
