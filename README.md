@@ -229,6 +229,9 @@ python course_checker.py
 - The `.env` file is present and contains the required `BOT_TOKEN` and `CHAT_ID` values.
 - The local virtual environment exists, but `pip` is not currently available in `.venv`.
 - `coursebot.ini` is Windows shell metadata and does not affect script execution.
+- `requirements.txt` has been added for reproducible package installation.
+- A GitHub Actions workflow was added at `.github/workflows/course_monitor.yml` to run `course_checker.py` every 30 minutes on `ubuntu-latest` and securely inject `BOT_TOKEN` and `CHAT_ID` from GitHub Secrets.
+- The workflow file was restored and reformatted to valid YAML with proper indentation and quoting.
 
 ---
 

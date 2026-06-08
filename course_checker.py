@@ -1,3 +1,4 @@
+import sys 
 import os
 import time
 import requests
@@ -51,10 +52,14 @@ def check_course_availability():
     except Exception as e:
         print(f"[{time.strftime('%X')}] ❌ Error scanning website: {e}")
 
-# --- MAIN AUTOMATION LOOP ---
+# --- MAIN AUTOMATION RUN ---
 if __name__ == "__main__":
-    print("🚀 eTIMS SPIM Course Scanner is now running. Keep this window open.")
-    print("Press Ctrl + C in the terminal to stop at any time.\n")
-    while True:
-        check_course_availability()
-        time.sleep(CHECK_INTERVAL)
+    print("🚀 Running single-scan eTIMS SPIM Course check...")
+    
+    # Run the check exactly ONE time
+    check_course_availability()
+    
+    # Force the script to close immediately so GitHub Actions shuts down the server
+    print(" Check complete. Shutting down system cleanly to save automation minutes.")
+    sys.exit(0)
+

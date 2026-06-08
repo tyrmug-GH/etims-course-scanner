@@ -1,8 +1,10 @@
+import os
+
 import requests
 
 # Paste your copied tokens inside the quotation marks
-BOT_TOKEN = "8830905143:AAHQOdZ3mekUkklCuSxPTj0B45J-nljNDyI"
-CHAT_ID = "6582891029"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 url = f"https://telegram.org{BOT_TOKEN}/sendMessage"
 payload = {
